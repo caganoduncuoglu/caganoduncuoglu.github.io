@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Global Reset & Body ===== */
+html,
+body {
+  @apply h-full w-full;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  /* Siyah arka plan */
+  color: #ffffff;
+  /* Varsayılan yazı beyaz */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ===== Section Defaults ===== */
+section {
+  @apply min-h-screen flex flex-col justify-center items-center text-center;
+}
+
+/* ===== Headings ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold leading-tight;
+}
+
+h1 {
+  @apply text-5xl md:text-7xl;
+}
+
+h2 {
+  @apply text-3xl md:text-5xl;
+}
+
+p {
+  @apply text-lg md:text-xl opacity-90;
+}
+
+/* ===== Utility Classes ===== */
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-full font-medium transition-colors duration-300;
+}
+
+.btn-primary {
+  @apply bg-white text-black hover:bg-gray-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-800 text-white hover:bg-gray-700;
+}

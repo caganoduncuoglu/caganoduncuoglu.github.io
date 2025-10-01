@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Aurora Portfolio",
-  description: "React Bits Aurora background with Hero section",
+  title: "Melik Cagan Oduncuoglu",
+  description: "Personal Website",
 };
 
 export default function RootLayout({

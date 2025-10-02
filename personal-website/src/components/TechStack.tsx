@@ -17,6 +17,7 @@ import {
     SiJira,
     SiSonarqube,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const stack = {
     Languages: [
@@ -65,32 +66,39 @@ const stack = {
 export default function MyStack() {
     return (
         <section id="techstack" className="relative z-10 py-16">
-            <div className="max-w-7xl mx-auto" >
-                <h2 className="text-3xl md:text-4xl font-bold mb-10">My Stack</h2>
+            <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
+            >
+                <div className="max-w-7xl mx-auto" >
+                    <h2 className="text-3xl md:text-4xl font-bold mb-10">My Stack</h2>
 
-                <div className="space-y-10 max-w-7xl">
-                    {Object.entries(stack).map(([category, items]) => (
-                        <div key={category} className="grid md:grid-cols-5 gap-6">
-                            {/* Left side category */}
-                            <div className="md:col-span-1">
-                                <h3 className="text-lg text-left font-semibold">{category}</h3>
-                            </div>
+                    <div className="space-y-10 max-w-7xl">
+                        {Object.entries(stack).map(([category, items]) => (
+                            <div key={category} className="grid md:grid-cols-5 gap-6">
+                                {/* Left side category */}
+                                <div className="md:col-span-1">
+                                    <h3 className="text-lg text-left font-semibold">{category}</h3>
+                                </div>
 
-                            {/* Right side pills */}
-                            <div className="md:col-span-4 flex flex-wrap gap-3">
-                                {items.map((item, i) => (
-                                    <span
-                                        key={i}
-                                        className="flex items-center gap-2 bg-white/5 text-gray-200 px-4 py-2 rounded-full text-base font-medium border border-white/10 cursor-default hover:bg-white/10 transition">
-                                        {item.icon && <span className="text-lg">{item.icon}</span>}
-                                        {item.label}
-                                    </span>
-                                ))}
+                                {/* Right side pills */}
+                                <div className="md:col-span-4 flex flex-wrap gap-3">
+                                    {items.map((item, i) => (
+                                        <span
+                                            key={i}
+                                            className="flex items-center gap-2 bg-white/5 text-gray-200 px-4 py-2 rounded-full text-base font-medium border border-white/10 cursor-default hover:bg-white/10 transition">
+                                            {item.icon && <span className="text-lg">{item.icon}</span>}
+                                            {item.label}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

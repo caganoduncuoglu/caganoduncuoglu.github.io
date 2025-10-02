@@ -1,6 +1,6 @@
 "use client";
 
-import { FaMapMarkerAlt, FaEnvelope, FaQuoteRight, FaSyncAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 export default function ContactSection() {
 

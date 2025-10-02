@@ -18,11 +18,6 @@ import {
     SiSonarqube,
 } from "react-icons/si";
 
-type StackItem = {
-    label: string;
-    icon?: React.ReactNode;
-};
-
 const stack = {
     Languages: [
         { label: "C#", icon: <SiSharp /> },

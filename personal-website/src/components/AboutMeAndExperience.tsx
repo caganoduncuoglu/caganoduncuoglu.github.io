@@ -99,7 +99,7 @@ export default function AboutExperienceSection() {
                     motivated to grow through cloud technologies and Unity game
                     development.
                 </p>
-                <p className="text-lg md:text-xl mb-6">Let's connect!</p>
+                <p className="text-lg md:text-xl mb-6">Let&apos;s connect!</p>
 
                 {/* ICONS */}
                 <div className="flex gap-6 text-3xl mb-12">

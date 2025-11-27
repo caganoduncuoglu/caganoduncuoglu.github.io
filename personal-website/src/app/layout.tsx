@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import RecruiterBot from "../components/RecruiterBot";
 
 export const metadata: Metadata = {
   title: "Melik Cagan Oduncuoglu",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen text-white">{children}</body>
+      <body className="min-h-screen text-white">
+        {children}
+        <RecruiterBot />
+      </body>
     </html>
   );
 }
